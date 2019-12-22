@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}    
+
+
+/* navigation */
+.nav {
+    width: 100%;
+    position: absolute;
+    position: fixed;
+    height: 50px;
+    display: flex;
+    z-index: 999;
+    background: white;
+}
+.border_button{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    float: right;
+    color: white;
+    height: 100%;
+    background-color: #D72638;
+    font-size: 16px;
+    max-width: 120px;
+    min-width: 120px;
+}
+.border_button div{
+    flex: 1;
+}
+.border_button p{
+    display: block;    
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+ }
+.logo img{
+    height: 100%;
+}
+.logo{
+    flex: 1;   
+    height: 50px;
+}
+
+.r-button{
+    flex:1;
+}
+ 
+/* top_banner */
+.top_banner{    
+    position: relative;
+    height: 600px;
+    background-image: url(img/bg.jpg);
+    background-color: #a5c5dc;
+    background-size: auto 600px; /* contain робить картинку точно по роміру з блоком */
+    background-position: center top;
+    background-attachment: fixed; /*Фіксує зображення в блоці при прорутці*/
+    background-repeat: no-repeat;
+}
+
+
+.logo_txt{
+    width: 100%;
+    height: 200px;
+    background-image: url(img/logo_banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+}
+
+.rabbit{
+    width: 400px;
+    height: 500px;
+    background-image: url(img/programmer.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.text_baner{
+    max-width: 640px;
+    padding: 100px 0;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+h2  {
+    color: #605F5E;
+    width: 300;
+}
+
+
+
+.video_block{
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+iframe{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.content_section{
+    display: flex;
+    margin: 0 auto;
+    max-width: 840px;
+}
+
+
+.block_skils{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin-left: 10px; 
+    background-color: #D72638;
+}
+
