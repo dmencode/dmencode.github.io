@@ -1,12 +1,15 @@
 body {
-    margin: 0;
+    margin: 0px 7px 0px;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    width: 100%;
 }    
 
 
 /* navigation */
-.nav {
+nav {
+    opacity: 1;
+    transition: all 1s;
     width: 100%;
     position: absolute;
     position: fixed;
@@ -48,28 +51,43 @@ body {
     flex:1;
 }
  
+
+
+
 /* top_banner */
 .top_banner{    
     position: relative;
     height: 600px;
     background-image: url(img/bg.jpg);
-    background-color: #a5c5dc;
     background-size: auto 600px; /* contain робить картинку точно по роміру з блоком */
     background-position: center top;
     background-attachment: fixed; /*Фіксує зображення в блоці при прорутці*/
     background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: -1;
+}
+.top_banner2{    
+    position: relative;
+    height: 600px;
+    background-size: auto 600px; /* contain робить картинку точно по роміру з блоком */
+    background-position: center top;
+    background-attachment: fixed; /*Фіксує зображення в блоці при прорутці*/
+    background-repeat: no-repeat;
+    z-index: 1;
+    margin-top: -600px;
+    
 }
 
 
 .logo_txt{
     width: 100%;
-    height: 200px;
+    height: 350px;
     background-image: url(img/logo_banner.png);
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     top: 50%;
-    margin-top: -100px;
+    margin-top: -175px;
 }
 
 .rabbit{
@@ -97,11 +115,19 @@ body {
     padding: 100px 0;
     margin: 0 auto;
     text-align: center;
+    font-size: 20px;
     }
 
 h2  {
     color: #605F5E;
-    width: 300;
+    width: 100;
+}
+
+.text_baner span{
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    /* color: aliceblue; */
+    background:  #eeebea;
 }
 
 
@@ -111,7 +137,7 @@ h2  {
     margin: 0 auto;
 }
 
-iframe{
+.video_block iframe{
     display: block;
     margin: 0 auto;
 }
@@ -122,16 +148,163 @@ iframe{
 .content_section{
     display: flex;
     margin: 0 auto;
-    max-width: 840px;
+    max-width: 1060px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 
+
+
+/* -----------------block scils------------------ */
 .block_skils{
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 400px;
-    margin-left: 10px; 
-    background-color: #D72638;
+    width: 250px;
+    height: 350px;
+    margin-left: 15px;
+    margin-top: 25px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .25);
+    opacity: 0;  
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
 }
+
+.block_skils div :first-child{
+    width: 100%;
+}
+
+.block_skils img{
+    width: 250px;
+    margin-bottom: 5px;
+}
+
+.block_skils .dskr{
+    margin: 10 10 10 10;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.block_skils .dskr p{
+    text-align: center;
+    display: block;
+    width: 210px;
+    margin: 0 auto;
+}
+
+h4  {
+    color: #605F5E;
+    width: 40;
+    text-align: center;
+}
+
+.is-showing{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/* ---------------------------------- */
+
+.pre_paralax{
+    background-color: #FEDCC8;
+    height: 80px;
+}
+
+.parallax{
+    position: relative;
+    height: 455px;
+    z-index: 1;
+    background-color: #FEDCC8;
+}
+
+.parallax div{
+    z-index: 1;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 455px;
+    bottom: 0;
+}
+
+.parallax__layer__0{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_0.png?raw=true);  
+}
+
+.parallax__layer__1{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_1.png?raw=true);  
+}
+
+.parallax__layer__2{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_2.png?raw=true);  
+}
+
+.parallax__layer__3{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true);  
+}
+
+.parallax__layer__4{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true);  
+}
+
+.parallax__layer__5{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_5.png?raw=true);  
+}
+
+.parallax__layer__6{
+    background-image: url(https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_6.png?raw=true);  
+    position: absolute;
+    top: 0;
+}
+
+.parallax .cover_paralax{
+    width: 100%;
+    height: 10px;
+    background: #2d112d;    
+}
+
+.flag{
+    background: #2d112b;
+    height: 100px;
+    position: relative;
+    top: -50;
+}
+footer {
+    width: 100%;
+    height: 350px;
+    z-index: 100;
+    margin-top: 5px;
+}
+
+.hiden_nav{
+    opacity: 0;
+    transition: all 1s;    
+}
+
+@media screen and (max-width: 768px) {
+
+    iframe{
+        width: 350px;
+        height: 197px;
+    }
+
+    .text_baner{
+        max-width: 90%;       
+        font-size: 15px;
+    }
+    
+    h2  {
+        color: #605F5E;
+        width: 100;
+    }
+    
+    .text_baner span{
+        font-size: 18px;
+    }
+  
+}
+
 
